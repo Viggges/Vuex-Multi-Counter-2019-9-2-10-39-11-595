@@ -1,14 +1,11 @@
 <template>
-    <div class="counter-sum">
-        <h2>
-            Counter Sum: <span>{{counterSum}}</span>
-        </h2>
+    <div class="" v-if="counterSum>8">
+        真棒！
     </div>
 </template>
-
 <script>
     export default {
-        name: 'counter-sum',
+        name: 'awsonme-counter',
         
         computed:{
             counterSum: function () {
@@ -17,6 +14,3 @@
         }
     }
 </script>
-<style scoped>
-
-</style>

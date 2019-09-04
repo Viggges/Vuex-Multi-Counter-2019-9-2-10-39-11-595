@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div id="FirstPage">
+      <input type="text" v-model="username">
+      <button @click="gotoWelcome">Start</button>
   </div>
 </template>
 
 <script>
+
+
 export default {
-  name: "app",
-  components: {},
+  name: "FirstPage",
+  components: {
+    
+  },
   data: function() {
     return {
-      counterNumbers: 3
+      username:""
     };
+  },
+  methods:{
+      gotoWelcome:function(){
+          this.$router.push('/welcome/'+this.username);
+      }
   }
 };
 </script>
